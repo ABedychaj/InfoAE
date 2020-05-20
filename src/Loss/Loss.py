@@ -65,3 +65,9 @@ class WeightedICALossFunction(LossFunction):
         normalize = 2.0 / (dim * (dim - 1))
         cost = torch.sum(normalize * triu) / self.number_of_gausses
         return cost
+
+
+def MINE(T_xy, T_x_y):
+    # compute the negative loss (maximise loss == minimise -loss)
+    neg_loss = -(torch.mean(T_xy) - torch.log(torch.mean(torch.exp(T_x_y))))
+    return neg_loss
