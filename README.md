@@ -1,0 +1,2 @@
+# InfoAE
+Information Maximizing AutoEncoder
