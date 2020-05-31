@@ -1,3 +1,4 @@
+scikit-learn
 future==0.18.2
 numpy==1.18.4
 pandas==1.0.3
