@@ -65,15 +65,16 @@ results = {
 }
 
 # parameters
-latent_dim = [10]
+latent_dim = [8]
 hidden_dim = [1]
-neurons = 256
-num_epochs = 21
+neurons = 64
+num_epochs = 51
 lr = 1E-3
-batch_size = 128
-beta = 1
+batch_size = 256
+beta = 2
 criterion = nn.MSELoss()
 MI_loss = MutualInformationLoss()
+
 train_dataloader = torch.utils.data.DataLoader(datasets.MNIST('../data',
                                                               download=True,
                                                               train=True,
